@@ -1,0 +1,79 @@
+Get-Process
+Get-Process | Where {$_.Handles -gt 500} | Sort Handles | Format-Table
+Get-Command 
+Get-Help
+Get-PSDrive
+Get-Command *Process
+Get-Help Get-Process
+Get-Help -detailed
+Get-Help Get-TraceSource -Full
+Get-Help about*
+
+---
+PS C:\Windows\system32> cd env:
+PS Env:\> dir
+
+PS Env:\> cd variable:
+PS Variable:\> dir *prefer*
+
+Get-Command *Alias
+
+stopping a process 
+kill -9 `ps -aef' | grep 'notepad' | grep -v grep |awk '{print $2}'`
+Get-Process notepad | stop-Process
+Get-Process | Get-Member
+Get-Process | Select Name,Company, ProcessName,VirtualMemory
+Get-Process | Get-Member *size*
+Get-Command *-Object
+======================
+Get-ExecutionPolicy
+Get-ExecutionPolicy -List
+Get-ExecutionPolicy -Scope CurrentUser
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+==================
+
+$list = "syed","awase","ameese","sycliq","tpri"
+forEach($item in $list){
+    write-host * $item
+}
+
+$dir |Get-Member 
+
+============
+registry as a drive 
+cd HKCU:
+PS C:\Windows\system32> cd HKCU:
+PS HKCU:\> dir Micro*
+PS HKCU:\> cd .\SOFTWARE
+PS HKCU:\SOFTWARE> dir micro*
+
+-----
+Powershell frameworks
+  Recon
+  Backdoors
+  Shellcode 
+  exfiltration
+  Privesc
+
+
+  Using a framework 
+
+Import-Module .\PowerSploit
+Get-Command -Module PowerSploit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+END

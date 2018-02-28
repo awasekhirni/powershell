@@ -1,0 +1,8 @@
+Name,AtBats,Hits
+Ken Myer,43,13
+Pilar Ackerman,28,11
+Jonathan Haas,37,17
+Syed Abbas,41,20
+Luisa Cazzaniga,22,6
+Andrew Cencini,35,11
+Baris Cetinok,19,4
