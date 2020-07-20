@@ -1,0 +1,22 @@
+DISM /Online /Cleanup-Image /CheckHealth
+DISM /Online /Cleanup-Image /ScanHealth
+DISM /Online /Cleanup-Image /RestoreHealth
+
+
+DISM /online /cleanup-image /restorehealth /source:E:\sources\install.wim
+Or:
+DISM /online /cleanup-image /restorehealth /source:E:\sources\install.esd
+ 
+
+To prevent the use of Windows Update online services and use only the local WIM/ESD file to scan and repair your Windows image:
+DISM /online /cleanup-image /restorehealth /source:E:\sources\install.wim /limitaccess
+Or:
+DISM /online /cleanup-image /restorehealth /source:E:\sources\install.esd /limitaccess
+
+dism /online /cleanup-image /restorehealth /limitaccess
+
+
+To repair system components and files, run:
+
+Repair-WindowsImage -Online -RestoreHealth
+
